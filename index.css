@@ -57,16 +57,25 @@ nav ul li a {
 .image-slider img {
     width: 100%;
     display: none;
-    height: 100%;
 }
 
 .image-slider img:first-child {
     display: block;
 }
 
-#rooms, #services, #booking {
+#rooms {
     background: linear-gradient(to bottom, #000000, #434343);
     color: white;
+}
+
+#services {
+    background: linear-gradient(to bottom, #000000, #434343);
+    color: #fff;
+}
+
+#booking {
+    background: linear-gradient(to bottom, #000000, #434343);
+    color: #fff;
 }
 
 .room, .service {
@@ -83,25 +92,16 @@ nav ul li a {
     height: auto;
 }
 
-.room button, form button {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* Text color */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the button */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; 
+.room button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-.room button:hover, form button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-.room button:active, form button:active {
-    background-color: #388e3c; /* Even darker green when the button is pressed */
-    transform: scale(0.98); /* Slightly shrink the button on click */
+.room button:hover {
+    background-color: #45a049;
 }
 
 form {
@@ -117,34 +117,31 @@ form {
 form label {
     display: block;
     margin: 10px 0 5px;
-    color:black;
+    color: black; /* Set label text color to black */
 }
 
-form input, form select {
+form input, form select, form button {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: green; /* Set button background color to green */
+    color: white;
+}
+
+#contact {
+    background: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 0%, rgb(19, 52, 109) 9.4%, rgb(18, 47, 98) 18.8%, rgb(18, 42, 89) 28.3%, rgb(18, 40, 83) 38%, rgb(17, 35, 72) 47.1%, rgb(17, 30, 62) 56.2%, rgb(18, 27, 54) 65.6%, rgb(18, 24, 49) 75.1%, rgb(18, 24, 48) 84.8%, rgb(37, 24, 87) 94.4%, rgb(37, 24, 87) 49.2%, rgb(37, 24, 87) 59.2%, rgb(18, 6, 66) 67.8%, rgb(0, 0, 0) 91.1%);
+    color: white;
 }
 
 footer {
     background-color: #333;
     color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-.footer-links {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px;
 }
 
 .footer-nav ul {
@@ -162,6 +159,17 @@ footer {
     text-decoration: none;
 }
 
-.footer-nav ul li a:hover {
-    text-decoration: underline;
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-links a.fab {
+    font-family: "FontAwesome";
 }
